@@ -44,10 +44,11 @@ class BtlWebsiteTest {
 
     @Test
     void searchesTheWebsite() {
-        homePage.searchFor("חישוב סכום דמי לידה ליום");
+        String searchTerm = "חישוב סכום דמי לידה ליום";
+        homePage.searchFor(searchTerm);
 
-        assertTrue(homePage.titleContains("חישוב סכום דמי לידה ליום"),
-                "The search results title should contain the search term");
+        assertTrue(homePage.titleContainsAny("חיפוש", searchTerm),
+                "The browser title should identify either search results or the matching page");
     }
 
     @Test

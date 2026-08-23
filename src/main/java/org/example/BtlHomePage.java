@@ -1,12 +1,12 @@
 package org.example;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class BtlHomePage extends BasePage {
-    private static final By SEARCH_INPUT = By.id("SearchInputLabel");
+    private static final By SEARCH_INPUT = By.id("TopQuestions");
     private static final By SEARCH_BUTTON = By.id("ctl00_SiteHeader_reserve_btnSearch");
+
     private static final By BRANCHES_LINK = By.id("ctl00_Topmneu_BranchesHyperLink");
 
     public BtlHomePage(WebDriver driver) {

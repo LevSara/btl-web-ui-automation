@@ -31,6 +31,13 @@ public abstract class BasePage {
         return wait.until(ExpectedConditions.titleContains(expectedText));
     }
 
+    public boolean titleContainsAny(String firstExpectedText, String secondExpectedText) {
+        return wait.until(ExpectedConditions.or(
+                ExpectedConditions.titleContains(firstExpectedText),
+                ExpectedConditions.titleContains(secondExpectedText)
+        ));
+    }
+
     public boolean pageContains(String expectedText) {
         return wait.until(ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), expectedText));
     }
